@@ -47,3 +47,21 @@ scripts/_demo_credentials.txt
 /UI-VALIDATION-*.md
 /DB-STATE-AUDIT-REPORT.md
 /MAINTENANCE_FACTS.md
+
+# ── Added when publishing publicly: defense-in-depth for secrets / local files ──
+# Any .env variant anywhere in the tree (e.g. frontend/.env.local, .env.production)
+**/.env
+**/.env.*
+# ...but keep the documented templates
+!**/.env.example
+# Private keys / certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+# Logs and other editor/local state
+*.log
+logs/
+.idea/
